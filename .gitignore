@@ -1,0 +1,9 @@
+# Standard gitignore
+.DS_Store
+Thumbs.db
+*.log
+.gemini/
+dist/
+node_modules/
+temp/
+scratch/

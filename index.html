@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThermiteOS | The Autoresearch Distro of Redox</title>
+  <meta name="description" content="ThermiteOS is a next-generation operating system distro combining the memory-safe Redox kernel with autonomous autoresearch tooling for self-synthesizing system design.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L85 75 L15 75 Z' fill='none' stroke='%23ff5500' stroke-width='8' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='52' r='12' fill='%23ffaa00'/%3E%3C/svg%3E">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Spark Canvas Background -->
+  <canvas id="spark-canvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+          <path d="M50 15 L85 75 L15 75 Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/>
+          <circle cx="50" cy="53" r="14" fill="currentColor"/>
+        </svg>
+        <span>Thermite<span class="highlight-orange">OS</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#terminal-section">Terminal</a>
+        <a href="https://github.com/pierce403/thermite" target="_blank" class="github-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          GitHub
+        </a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Autoresearch Distro of Redox</span>
+      </div>
+      <h1 class="hero-title">
+        A Self-Synthesizing<br>
+        <span class="gradient-text">Microkernel Operating System</span>
+      </h1>
+      <p class="hero-description">
+        ThermiteOS fuses the memory-safe, Rust-based <strong>Redox Kernel</strong> with autonomous agentic tooling. It continuously learns, adapts, and compiles its userland dynamically through targeted, local research loops.
+      </p>
+      <div class="hero-actions">
+        <a href="#terminal-section" class="btn btn-primary">
+          Launch Live Demo
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#features" class="btn btn-secondary">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Terminal Section -->
+  <section id="terminal-section" class="terminal-section">
+    <div class="section-header">
+      <h2 class="section-title">Experience the Thermite Shell</h2>
+      <p class="section-subtitle">Interact directly with a simulated instance of ThermiteOS. Run research loops, query kernel properties, and experience auto-synthesis.</p>
+    </div>
+    
+    <div class="terminal-wrapper">
+      <div class="terminal-header">
+        <div class="terminal-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control expand"></span>
+        </div>
+        <div class="terminal-title">thermite@redox-kernel v0.1.0-alpha</div>
+        <div class="terminal-status">
+          <span class="status-dot online"></span>
+          <span class="status-text">REDOX CORE ACTIVE</span>
+        </div>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-line">ThermiteOS (Redox Distro) version 0.1.0-alpha</div>
+        <div class="terminal-line">Copyright (c) 2026 Thermite Contributors. Released under MIT License.</div>
+        <div class="terminal-line">Kernel: Redox microkernel (Rust memory-safe architecture)</div>
+        <div class="terminal-line">Autoresearch Daemon: ONLINE (type <span class="highlight-orange">`research`</span> or <span class="highlight-orange">`help`</span> to begin)</div>
+        <br>
+        <div class="terminal-input-row">
+          <span class="prompt">thermite#</span>
+          <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false" placeholder="Type help...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <h2 class="section-title">Built for the Autoresearch Era</h2>
+      <p class="section-subtitle">ThermiteOS redefines operating system design by utilizing self-correcting agents to discover, patch, and optimize kernel modules and userland programs.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon orange-glow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Redox Microkernel Core</h3>
+        <p>Built directly upon the Redox kernel, featuring a microkernel architecture where drivers, filesystems, and network stacks run safely in user space. Inherently immune to classic memory corruption bugs.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon amber-glow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Continuous Auto-Synthesis</h3>
+        <p>Integrates autoresearch loops directly into the package manager. The OS identifies dependencies, queries developer knowledge graphs, resolves build errors, and adapts code natively for the Redox ABI.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon cyan-glow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <h3>Rust-First Architecture</h3>
+        <p>From the bootloader to the terminal shell, every component leverages Rust's strict safety guarantees. ThermiteOS eliminates undefined behavior while retaining full bare-metal performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section id="architecture" class="architecture-section">
+    <div class="architecture-container">
+      <div class="architecture-text">
+        <div class="badge">
+          <span class="badge-dot cyan"></span>
+          <span class="badge-text">System Design</span>
+        </div>
+        <h2>Redox Microkernel meets Autoresearch Agents</h2>
+        <p>Traditional operating systems suffer from monolithic bloat and manual maintenance bottlenecks. ThermiteOS addresses this by decoupling critical components and wrapping them in automated agentic feedback loops.</p>
+        
+        <div class="stack-list">
+          <div class="stack-item">
+            <div class="stack-number">01</div>
+            <div>
+              <h4>Microkernel Separation</h4>
+              <p>Systems drivers and components are isolated processes, limiting the blast radius of any individual failure.</p>
+            </div>
+          </div>
+          <div class="stack-item">
+            <div class="stack-number">02</div>
+            <div>
+              <h4>Autoresearch Daemon (ard)</h4>
+              <p>A background system daemon that monitors userland build failures, reads system logs, and queries local models to write source-level repairs.</p>
+            </div>
+          </div>
+          <div class="stack-item">
+            <div class="stack-number">03</div>
+            <div>
+              <h4>Self-Improving Userland</h4>
+              <p>Packages are continuously rebuilt and verified under test suites, creating a self-healing OS distribution that evolves without manual packager intervention.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="architecture-visual">
+        <div class="visual-box">
+          <div class="visual-layer layer-agents">
+            <span>Autoresearch Agents (Synthesis)</span>
+            <div class="pulse-ring"></div>
+          </div>
+          <div class="visual-connector"></div>
+          <div class="visual-layer layer-userland">
+            <span>Userland (Scheme / Ion Shell / Orbital)</span>
+          </div>
+          <div class="visual-connector"></div>
+          <div class="visual-layer layer-kernel">
+            <span>Redox Microkernel (Rust Core)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-card">
+      <h2>Join the Redox Evolution</h2>
+      <p>Help us build the first self-synthesizing operating system distro. Experience Redox safety combined with next-gen automated development.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/pierce403/thermite" target="_blank" class="btn btn-primary">Contribute on GitHub</a>
+        <a href="#terminal-section" class="btn btn-secondary">Simulate System</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24">
+          <path d="M50 15 L85 75 L15 75 Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/>
+          <circle cx="50" cy="53" r="14" fill="currentColor"/>
+        </svg>
+        <span>ThermiteOS</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.redox-os.org/" target="_blank">Redox OS</a>
+        <a href="https://github.com/redox-os/redox" target="_blank">Redox GitHub</a>
+        <a href="https://github.com/pierce403/thermite" target="_blank">Thermite GitHub</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 ThermiteOS Project. Built on top of Redox OS.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
