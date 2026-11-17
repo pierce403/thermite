@@ -35,10 +35,6 @@ To view the landing page locally:
 
 ThermiteOS is currently in alpha status. Pull requests, documentation contributions, and architecture suggestions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Cloudflare publishing
 
 Native Cloudflare Git builds publish `main`. Validate with `npm ci` and
@@ -46,3 +42,13 @@ Native Cloudflare Git builds publish `main`. Validate with `npm ci` and
 Only the reviewed public file list is copied to `dist`; original public content
 and GitHub Pages recovery remain. Credentials stay in Cloudflare and previews
 are disabled. The revision is at `/.well-known/cloudflare-build.json`.
+
+## License
+
+Original project code and documentation are licensed under the
+[Apache License 2.0](LICENSE). Third-party dependencies, source excerpts,
+assets, and other third-party material retain their respective licenses and
+copyright notices; this grant does not relicense that material.
+
+The previous MIT copyright and permission notice is preserved in
+[LICENSE-MIT](LICENSE-MIT) for existing material and prior distributions.
